@@ -7,7 +7,7 @@ game.newLoop('home', function () {
   hover_on_btn(ui_soundOn_normal, ui_soundOn_hover, ui_soundOn_noactive);
   hover_on_btn(ui_store_normal, ui_store_hover, ui_store_noactive);
   hover_on_btn(ui_home_normal, ui_home_hover, ui_home_noactive);
- 
+
   ui_close_normal.x = frame.x + 30;
   ui_close_hover.x = frame.x + 30;
   // запуск игрового цикла по клику

@@ -8,7 +8,7 @@ if (window.innerWidth >= 2560) {
   pjs = new PointJS(1440, 800, { backgroundColor: "" });
 } else if (window.innerWidth >= 1024 && window.innerWidth <= 1439) {
   pjs = new PointJS(1024, 900, { backgroundColor: "" });
-} else if (window.innerWidth >= 0 && window.innerWidth <= 1023) { 
+} else if (window.innerWidth >= 0 && window.innerWidth <= 1023) {
   njs = new PointJS(window.innerWidth, window.innerHeight, { backgroundColor: "white" });
   njs.brush.drawMultiText({
     text: "Sorry, this game is\nfor wide screens only",
