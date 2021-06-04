@@ -1,5 +1,25 @@
-var pjs = new PointJS(window.innerWidth, window.innerHeigh, { backgroundColor: "" });
-pjs.system.initFullPage(); // на весь экран
+var pjs;
+var njs;
+
+//под разный размер экрана
+if (window.innerWidth >= 2560) {
+  pjs = new PointJS(2560, 1080, { backgroundColor: "" });
+} else if (window.innerWidth >= 1440 && window.innerWidth <= 2559) {
+  pjs = new PointJS(1440, 800, { backgroundColor: "" });
+} else if (window.innerWidth >= 1024 && window.innerWidth <= 1439) {
+  pjs = new PointJS(1024, 900, { backgroundColor: "" });
+} else if (window.innerWidth >= 0 && window.innerWidth <= 1023) { 
+  njs = new PointJS(window.innerWidth, window.innerHeight, { backgroundColor: "white" });
+  njs.brush.drawMultiText({
+    text: "Sorry, this game is\nfor wide screens only",
+    x: window.innerWidth / 2, y: window.innerHeight / 2,
+    color: "white", align: "center",
+    font: "Comic Sans MS",
+    style: "bold", size: 30,
+    strokeColor: "#000", strokeWidth: 2
+  })
+}
+
 pjs.system.setSettings({ isAutoClear: true, isShowError: true, isStopForError: true });
 
 var game = pjs.game; //для взаимодействия с движком

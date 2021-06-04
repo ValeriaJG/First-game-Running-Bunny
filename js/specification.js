@@ -8,8 +8,11 @@ game.newLoop('specification', function () { //начало игрового цы
   ui_close_hover.x = frame.x + 30;
 
   //содержимое правил
-  var price_base_gun = "Jump: W or ↑\n\nDown: S or ↓\n\nShoot base cannon:\nSpace + D or Space + →\n\nShoot double cannon:\nSpace + D + W or Space + → + ↑"; //копируем стиль из переменной
-  txt_paragraph(frame, price_base_gun, 390, 140, "center", 45)
+  var txt_1_specification = "Jump: W or ↑    Down: S or ↓\n\nShoot base cannon:\nSpace + D or Space + →\n\nShoot double cannon:\nSpace + D + W or Space + → + ↑"; //копируем стиль из переменной
+  txt_paragraph(frame, txt_1_specification, 390, 140, "center", 45)
+ 
+  var txt_2_specification = "Если нашли баг в игре, пожалуста,\nнапишите об этом на почту eagle.dev.it@gmail.com"; 
+  txt_paragraph(frame, txt_2_specification, 390, 520, "center", 25)
 
   // ховер кнопки выхода
   hover_on_btn(ui_close_normal, ui_close_hover, ui_close_noactive);

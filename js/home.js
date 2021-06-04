@@ -84,6 +84,7 @@ game.newLoop('home', function () {
 
   // вернуться домой
   if (mouse.isInStatic(ui_home_normal.getStaticBox()) && mouse.isPress("LEFT")) {
+    document.location.href = "https://worldinformation.ru/"
   }
 
   //если у нас есть пушка, то тогда она не будет появляться
