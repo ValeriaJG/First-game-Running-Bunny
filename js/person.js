@@ -3,10 +3,12 @@ var njs;
 
 //под разный размер экрана
 if (window.innerWidth >= 2560) {
-  pjs = new PointJS(2560, 1080, { backgroundColor: "" });
+  pjs = new PointJS(1920, 1080, { backgroundColor: "" });
 } else if (window.innerWidth >= 1440 && window.innerWidth <= 2559) {
   pjs = new PointJS(1440, 800, { backgroundColor: "" });
-} else if (window.innerWidth >= 1024 && window.innerWidth <= 1439) {
+} else if (window.innerWidth >= 1280 && window.innerWidth <= 1439) {
+  pjs = new PointJS(1280, 900, { backgroundColor: "" });
+} else if (window.innerWidth >= 1024 && window.innerWidth <= 1279) {
   pjs = new PointJS(1024, 900, { backgroundColor: "" });
 } else if (window.innerWidth >= 0 && window.innerWidth <= 1023) {
   njs = new PointJS(window.innerWidth, window.innerHeight, { backgroundColor: "white" });
@@ -108,9 +110,9 @@ var bunny = game.newMesh({
 })
 
 var bg_base = game.newImageObject({ //фон
-  file: "img/bg_base.jpg",
+  file: "img/bg_base.png",
   x: 0, y: 0,
-  w: 2599, h: 1179,
+  w: 1920, h: 1080,
   alpha: 1
 });
 

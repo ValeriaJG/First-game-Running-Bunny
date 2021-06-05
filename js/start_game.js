@@ -66,12 +66,12 @@ game.newLoop('start', function () {
     counter >= 1301 && counter <= 2000 ||
     counter >= 3001 && counter <= 4000 ||
     counter >= 5501 && counter <= 7000) {
-    bg_base.file = "img/bg_base.jpg";
+    bg_base.file = "img/bg_base.png";
   } else if (counter >= 501 && counter <= 1300 ||
     counter >= 2001 && counter <= 3000 ||
     counter >= 4001 && counter <= 5500 ||
     counter >= 7001 && counter <= 9500) {
-    bg_base.file = "img/bg_night.jpg"
+    bg_base.file = "img/bg_night.png"
   }
 
   //цыкл и скорость фона
