@@ -1,0 +1,17 @@
+body {
+    max-width: 100%;
+    background-image: url(https://worldinformation.ru/game/img/bg.jpg);
+}
+
+#loading {
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 15%;
+    color: aqua;
+}
+
+p {
+    margin-top: 100px;
+}

@@ -4,18 +4,18 @@ game.newLoop('buy', function () { //начало игрового цыкла
   frame.draw(); //фрейм
   store_txt.draw();
   ui_close.draw(); // кнопка закрытия окна покупки
+
   ui_close_normal.x = frame.x + 30;
   ui_close_hover.x = frame.x + 30;
-  //buy base gun
-  var buy_gun_bullet = game.newImageObject({ //базовая пушка
-    file: "img/buy_gun_bullet.png",
-    x: frame.x + 40, y: frame.y + 120
-  });
-  //buy_doublegun_bullet
-  var buy_doublegun_bullet = game.newImageObject({
-    file: "img/buy_doublegun_bullet.png",
-    x: frame.x + 610, y: frame.y + 120
-  });
+  buy_gun_bullet.x = frame.x + 40;
+  buy_gun_bullet.y = frame.y + 120;
+  buy_gun_bullet.w = 189;
+  buy_gun_bullet.h = 179;
+
+  buy_doublegun_bullet.x = frame.x + 610;
+  buy_doublegun_bullet.y = frame.y + 120;
+  buy_doublegun_bullet.w = 203;
+  buy_doublegun_bullet.h = 185;
 
   store_style_txt.alpha = 1; //включаем видимость на стиле
   store_style_txt.size = 50; // задаем размер стилю
@@ -26,7 +26,7 @@ game.newLoop('buy', function () { //начало игрового цыкла
   price_base_gun.y = buy_gun_bullet.y + 50; //задаем позицию по y
 
   var btn_buy_coin = game.newImageObject({ //монета
-    file: "img/coin.png",
+    file: "https://worldinformation.ru/game/img/coin.png",
     x: price_base_gun.x + 103, y: price_base_gun.y - 10,
     w: 116 / 2.5, h: 111 / 2.5
   });
@@ -74,7 +74,7 @@ game.newLoop('buy', function () { //начало игрового цыкла
   hover_on_btn(buy_bullet_btn_play_video_normal, buy_bullet_btn_play_video_hover, buy_bullet_btn_play_video_noactive); //покупка двойной пушки
 
   // закрыть окно покупки
-  if (mouse.isInStatic(ui_close_normal.getStaticBox()) && mouse.isPress("LEFT") || key.isDown("SPACE")) {
+  if (mouse.isInStatic(ui_close_normal.getStaticBox()) && mouse.isPress("LEFT")) {
     price_double_gun.alpha = 0;
     game.setLoop('home');
   }
